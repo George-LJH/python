@@ -1,7 +1,5 @@
 import random
-
-def print_hand(hand):
-    rock = '''
+rock = '''
     _______
 ---'   ____)
       (_____)
@@ -10,7 +8,7 @@ def print_hand(hand):
 ---.__(___)
 '''
 
-    paper = '''
+paper = '''
     _______
 ---'   ____)____
           ______)
@@ -19,7 +17,7 @@ def print_hand(hand):
 ---.__________)
 '''
 
-    scissor = '''
+scissor = '''
     _______
 ---'   ____)____
           ______)
@@ -27,50 +25,50 @@ def print_hand(hand):
       (____)
 ---.__(___)
 '''
-    if hand=="scissor":
-        print(scissor)
-    if hand=="rock":
-        print(rock)
-    if hand=="paper":
-        print(paper)
-
-def checkwinlose(userhand,cpuhand):
-    if cpuhand=="rock":
-        if userhand=="paper":
-            print("You win")
-    if cpuhand=="paper":
-        if userhand=="rock":
-            print("You lose")
-    if cpuhand=="scissor":
-        if userhand=="rock":
-            print("You win")
-    if cpuhand=="rock":
-        if userhand=="scissor":
-            print("You lose")
-    if cpuhand=="scissor":
-        if userhand=="paper":
-            print("You lose")
-    if cpuhand=="paper":
-        if userhand=="scissor":
-            print("You win")
-    if cpuhand==userhand:
-        print("Tie")
-    
 
 while True:
     mylist = ["rock", "paper", "scissor"]
 
     cpu=random.choice(mylist)
+
     print("Rock, paper, or scissor?: ")
-    user = input()
-    #print user
+    user = input("")
     print("User: ")
-    print_hand(user)
+    #print user
+    if user=="scissor":
+        print(scissor)
+    if user=="rock":
+        print(rock)
+    if user=="paper":
+        print(paper)
     if user not in mylist:
         print("wrong input")
     else:
         #print cpu
-        print("cpu:")
-        print_hand(cpu)
+        if cpu=="paper":
+            print("cpu: "+paper)
+        if cpu=="rock":
+            print("cpu: "+rock)
+        if cpu=="scissor":
+            print("cpu: "+scissor)
         # win lose condition
-        checkwinlose(user,cpu)
+        if cpu=="rock":
+            if user=="paper":
+                print("You win")
+        if cpu=="paper":
+            if user=="rock":
+                print("You lose")
+        if cpu=="scissor":
+            if user=="rock":
+                print("You win")
+        if cpu=="rock":
+            if user=="scissor":
+                print("You lose")
+        if cpu=="scissor":
+            if user=="paper":
+                print("You lose")
+        if cpu=="paper":
+            if user=="scissor":
+                print("You win")
+        if cpu==user:
+            print("Tie")
