@@ -31,7 +31,7 @@ def askinteger():
 def askoperation():
     while True:
         c = input()
-        if c in ["=","-","*","/","^"]:
+        if c in ["+","-","*","/","^"]:
             return c
         else:
             print("Wrong operation. Try again.")
