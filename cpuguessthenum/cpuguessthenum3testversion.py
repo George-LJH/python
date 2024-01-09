@@ -9,6 +9,7 @@ def askinteger():
             return val 
         except ValueError:
             print("That's not an integer! Try again.")
+        except if val not 
 correct_answer=random.randint(0,100)
 min=0
 max=100
@@ -18,7 +19,6 @@ score=0
 print("Think of a number between 0 to 100 and the cpu will guess it!")
 answer=askinteger()
 while True:
-    if cpuguess==answer:
         max=100
         min=0
         numofguess=8
