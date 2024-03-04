@@ -22,10 +22,10 @@ print("Divide")
 
 while True:
     # take input from the user
-    choice = input("Enter choice (1/2/3/4): ")
+    choice = input("Enter choice (Add/Subtract/Multiply/Divide): ")
 
     # check if choice is one of the four options
-    if choice in ('Add', 'Subtract', 'Multiply', 'divide'):
+    if choice in ('Add', 'Subtract', 'Multiply', 'Divide'):
         try:
             num1 = float(input("Enter first number: "))
             num2 = float(input("Enter second number: "))
@@ -36,13 +36,13 @@ while True:
         if choice == 'Add':
             print(num1, "+", num2, "=", add(num1, num2))
 
-        elif choice == '2':
+        elif choice == 'Subtract':
             print(num1, "-", num2, "=", subtract(num1, num2))
 
-        elif choice == '3':
+        elif choice == 'Multiply':
             print(num1, "*", num2, "=", multiply(num1, num2))
 
-        elif choice == '4':
+        elif choice == 'Divide':
             print(num1, "/", num2, "=", divide(num1, num2))
 
         # check if user wants another calculation
