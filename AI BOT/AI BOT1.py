@@ -3,27 +3,18 @@ print(" Tell me a knock knock joke")
 print(" Knock Knock")
 print(" Tell me a joke")
 user= input()
-user= user.lower()
-
-
-
+# user=user.lower()
+print(user)
 while True:
-    while user!="tell me a joke" or "knock knock":
-        print("Sorry, I don't understand. Can you please repeat your request?")
-        user= input()
-        user= user.lower()
+    if user=="knock knock":
+        print("TST")
+        user=input()
+        # user=user.lower()
     elif user=="tell me a joke":
-        print("Where do pigs go to school?")
-        print("Hogwarts!")
-        user= input()
-        user= user.lower()
-    elif user=="knock knock":
-        print("Who's there?")
-        user= input()
-        user= user.lower()
-        print("user", "who?")
-        user= input()
-        user= user.lower()
-        print("Ha ha! That's a funny joke!")
-    elif user=="exit()":
-        exit()
+        print("TST2")
+        user=input()
+        # user=user.lower()
+    elif user!= "knock knock" or "tell me a joke":
+        print("ERROR")
+        user=input
+        # user=user.lower()
