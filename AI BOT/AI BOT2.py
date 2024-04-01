@@ -22,7 +22,7 @@ while True:
         user=input()
         # user=user.lower()
     elif user.lower()!= "knock knock" or "tell me a joke":
-        print("A")
+        print("I don't understand you... Can you repeat your request?")
         user=input()
 
 
