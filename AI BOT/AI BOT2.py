@@ -1,3 +1,4 @@
+from googlesearch import search
 print("AI: Hello. How may I help you today? You can say simple commands like:")
 
 print(" Hi")
@@ -28,7 +29,16 @@ while True:
     elif user.lower()=="hi":
         print("AI: Hello! Nice to meet you!")
         # user=user.lower()
-    elif user.lower()!= "knock knock" or "tell me a joke" or "exit()" or "hi":
+    elif user.lower()=="google search":
+        print("What do you need me to search for?")
+        query = input()
+
+        for i in search(query, tld="co.in", num=10, stop=10, pause=2):
+            print(i)
+        print("What else do you want me to do?")
+        user = input()
+    # elif user.lower()!= "knock knock" or "tell me a joke" or "exit()" or "hi" or "google search":
+    else:
         print("AI: I don't understand you... Can you repeat your request?")
         user=input()
 
